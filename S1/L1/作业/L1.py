@@ -105,9 +105,9 @@ def data_read(path):
 
 def vocab_generate(voacb_path, word_item):
     """
-    @description: 读取分词数据
-    @input: path-分词数据路径
-    @return: word-分词list
+    @description: 将分词字典写入文件中
+    @input: voacb_path-字典路径, word_item-分词字典[(xx,xx),(xx,xx)]
+    @return: None
     """
     with open(voacb_path, 'w', encoding='utf-8') as f:
         for i, item in enumerate(word_item):
@@ -145,5 +145,3 @@ if __name__ == '__main__':
     wordvec_build(train_data_path, test_data_path, train_segx_path, train_segy_path, test_segx_path, remove_words)
     # 由训练集和测试集分词建立字典
     vocab_build(voacb_path, train_segx_path, train_segy_path, test_segx_path)
-
-
