@@ -31,6 +31,7 @@ def extract_sentence(train_x_seg_path, train_y_seg_path, test_seg_path):
     lines += read_lines(test_seg_path)
     for line in lines:
         ret.append(line)
+    # 可以直接返回lines，与ret等价
     return ret
 
 
@@ -41,9 +42,9 @@ def save_sentence(lines, sentence_path):
     print('save sentence:%s' % sentence_path)
 
 
-def build(train_x_seg_path, test_y_seg_path, test_seg_path, out_path=None, sentence_path='',
+def build(train_x_seg_path, train_y_seg_path, test_seg_path, out_path=None, sentence_path='',
           w2v_bin_path="w2v.bin", min_count=100):
-    sentences = extract_sentence(train_x_seg_path, test_y_seg_path, test_seg_path)
+    sentences = extract_sentence(train_x_seg_path, train_y_seg_path, test_seg_path)
     save_sentence(sentences, sentence_path)
     print('train w2v model...')
     # train model

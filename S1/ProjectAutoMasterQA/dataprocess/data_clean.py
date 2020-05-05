@@ -3,6 +3,7 @@ import pandas as pd
 from jieba import posseg
 import jieba
 
+
 REMOVE_WORDS = ['|','[',']','语音','图片']
 
 def read_stopwords(path):

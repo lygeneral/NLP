@@ -1,3 +1,4 @@
+# 根据数据集建立字典
 import jieba
 import pandas as pd
 from collections import Counter
@@ -5,7 +6,7 @@ from collections import Counter
 def read_stopword(path):
     """
     @description: 从文件中读取停用词并返回set集合
-    @input: path-停用词路径
+    @param: path-停用词路径
     @return: lines-停用词set集合
     """
     lines = set()
@@ -18,7 +19,7 @@ def read_stopword(path):
 def remove_word(word_list, remove_words):
     """
     @description: 去除list中的无效词、字符
-    @input: word_list-原始list
+    @param: word_list-原始list
     @return: word_list-去除无效词、字符后的list
     """
     word_list = [word for word in word_list if word not in remove_words]
@@ -27,7 +28,7 @@ def remove_word(word_list, remove_words):
 def parse_data(train_path, test_path):
     """
     @description: 读取训练数据和测试数据
-    @input: train_path-训练数据路径，test_path-测试数据路径
+    @param: train_path-训练数据路径，test_path-测试数据路径
     @return: train_x-训练数据x, train_y-训练数据y, test_x-测试数据x, test_y-测试数据y（无数据）
     """
     train_df = pd.read_csv(train_path, encoding='utf-8')
@@ -48,7 +49,7 @@ def parse_data(train_path, test_path):
 def segment(sentence):
     """
     @description: jieba分词
-    @input: 字符串
+    @param: 字符串
     @return: list
     """
     return jieba.lcut(sentence)
@@ -56,7 +57,7 @@ def segment(sentence):
 def save_data(data, path, remove_words):
     """
     @description: 输入数据并在去除停用词及无效词后进行分词
-    @input: data-数据集, path-写入文件的路径, remove_words-待去除的无效词
+    @param: data-数据集, path-写入文件的路径, remove_words-待去除的无效词
     @return: None
     """
     with open(path, 'w', encoding='utf-8') as f:
@@ -80,8 +81,8 @@ def save_data(data, path, remove_words):
 def wordvec_build(train_data_path, test_data_path, train_segx_path, train_segy_path, test_segx_path, remove_words):
     """
     @description: 将训练集和测试集的数据进行分词
-    @input: train_data_path-数据集路径, test_data_path-测试集路径, remove_words-待去除的无效词
-    @input: train_segx_path-分词后的训练集x路径, train_segy_path-分词后的训练集y路径, test_segx_path-分词后的测试集x路径
+    @param: train_data_path-数据集路径, test_data_path-测试集路径, remove_words-待去除的无效词
+    @param: train_segx_path-分词后的训练集x路径, train_segy_path-分词后的训练集y路径, test_segx_path-分词后的测试集x路径
     @return: None
     """
     train_x, train_y, test_x, _ = parse_data(train_data_path, test_data_path)
@@ -93,7 +94,7 @@ def wordvec_build(train_data_path, test_data_path, train_segx_path, train_segy_p
 def data_read(path):
     """
     @description: 读取分词数据
-    @input: path-分词数据路径
+    @param: path-分词数据路径
     @return: word-分词list
     """
     with open(path, 'r', encoding='utf-8') as f:
@@ -106,7 +107,7 @@ def data_read(path):
 def vocab_generate(voacb_path, word_item):
     """
     @description: 将分词字典写入文件中
-    @input: voacb_path-字典路径, word_item-分词字典[(xx,xx),(xx,xx)]
+    @param: voacb_path-字典路径, word_item-分词字典[(xx,xx),(xx,xx)]
     @return: None
     """
     with open(voacb_path, 'w', encoding='utf-8') as f:
@@ -118,7 +119,7 @@ def vocab_generate(voacb_path, word_item):
 def vocab_build(voacb_path, train_segx_path, train_segy_path, test_segx_path):
     """
     @description: 读取训练集和测试集分词形成分词字典库，按词频由高到低排列
-    @input: voacb_path-字典路径, train_segx_path-分词后的训练集x路径, train_segy_path-分词后的训练集y路径, test_segx_path-分词后的测试集x路径
+    @param: voacb_path-字典路径, train_segx_path-分词后的训练集x路径, train_segy_path-分词后的训练集y路径, test_segx_path-分词后的测试集x路径
     @return: None
     """
     word_list = []
