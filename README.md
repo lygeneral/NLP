@@ -42,17 +42,7 @@ You can download pretrained models here:
 
 > 📋Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
-## Results
 
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
-> 📋Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
 
 ## Summary
@@ -62,3 +52,9 @@ Our model achieves the following performance on :
 > 初识词向量Word2Vec，并介绍了经典Skip-Gram和CBOW模型。Skip-Gram通过中心词预测上下文，即后验概率。CBOW通过上下文预测中心词，即先验概率。
 
 > 首先对训练和测试数据集进行预处理，去除特殊字符。然后基于jieba分词并建立字典。  
+
+### L2
+
+> 基于哈夫曼树和负采样的词向量优化。
+
+> RNN、LSTM和GRU模型。  
