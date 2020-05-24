@@ -1,10 +1,7 @@
-> 📋A template README.md for code accompanying a Machine Learning paper
 
 # 后厂理工NLP
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
-
-> 📋Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+> 📋NLP: 主要进行NLP模型及算法的学习，并开发NLP相关项目。
 
 ## 项目1-汽车大师问答摘要与推理
 
@@ -13,37 +10,6 @@ This repository is the official implementation of [My Paper Title](https://arxiv
 > 汽车大师是一款通过在线咨询问答为车主解决用车问题的APP，致力于做车主身边靠谱的用车顾问，车主用语音、文字或图片发布汽车问题，系统为其匹配专业技师提供及时有效的咨询服务。由于平台用户基数众多，问题重合度较高，大部分问题在平台上曾得到过解答。重复回答和持续时间长的多轮问询不仅会花去汽修技师大量时间，也使用户获取解决方案的时间变长，对双方来说都存在资源浪费的情况。
 
 > 为了节省更多人工时间，提高用户获取回答和解决方案的效率，汽车大师希望通过利用机器学习对平台积累的大量历史问答数据进行模型训练，基于汽车大师平台提供的历史多轮问答文本，输出完整的建议报告和回答，让用户在线通过人工智能语义识别即时获得全套解决方案。
-
-## Training
-
-To train the model(s) in the paper, run this command:
-
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-
-> 📋Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
-## Evaluation
-
-To evaluate my model on ImageNet, run:
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
-> 📋Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
-> 📋Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
-
-
-
 
 ## Summary
 
