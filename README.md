@@ -24,3 +24,19 @@
 > 基于哈夫曼树和负采样的词向量优化。
 
 > RNN、LSTM和GRU模型。  
+
+### L3
+
+> Encoder-Decoder结构及Attention机制。
+
+> 介绍Seq2Seq中Teacher Forcing提升训练效果的方法。
+
+### L4
+
+> 增强模型的泛化能力的Beam Search和Scheduled Sampling。
+
+> 文本摘要的评价指标，包括ROUGE-N，ROUGE-L等等ROUGE方法。  
+
+### L5
+
+> 处理OOV词的CopyNet和PGN模型。
